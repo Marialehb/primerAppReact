@@ -15,7 +15,9 @@
 
 import React from "react";
 import {createRoot} from "react-dom/client"; // llamada al React DOM para renderizar componentes
-import FirstAPP from "./FirstApp";
+// import FirstAPP from "./FirstApp";
+import {CounterApp} from './CounterApp';
+
 // import HelloWorldApp from "./HelloWorldApp";
 
 import "./styles.css";
@@ -25,10 +27,9 @@ import "./styles.css";
 const root = createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        
         {/* <HelloWorldApp /> */}
-        <FirstAPP title="Hola soy Ale" subTitle={123}/>
-
+        {/* <FirstAPP/> */}
+        <CounterApp value={10}/>
     </React.StrictMode>
 );
 
