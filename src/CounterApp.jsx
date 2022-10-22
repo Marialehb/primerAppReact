@@ -4,28 +4,26 @@
 import { useState } from "react";
 
 
+
 export const CounterApp = ({value}) => {
 
- const [valor ,setValor] = useState(2);
+ const [counter ,setCounter] = useState(value);
 
+const handleAdd = ()=> setCounter (counter + 1);
+   // setCounter ( (c)=> c + 1);
+const restar = ()=> setCounter (counter -1);
+const reset = () => setCounter (value);
 
  
- const cambiarValor =()=>{
-    setValor(valor + 1);
- }
 
- const restar =()=> {
-    setValor(valor - 2);
- }
-
-    return (
+     return (
     <>
-        <h1>CounterApppppp</h1>
-        <h2>El valor es {valor}</h2> 
-        <h2>El valor es {valor}</h2> 
-        {/* <div className="clasee">{valor}</div> */}
-        <button onClick={cambiarValor}>boton para cambiar a 8</button>
-        <button onClick={restar}>Restar 2</button>
+        <h1>CounterApp</h1>
+         <h2> {counter}</h2> 
+
+      <button onClick={ handleAdd }>+1</button> 
+      <button onClick={ restar }>-1</button> 
+      <button onClick={reset}>Reset</button> 
         
     </>
     );
