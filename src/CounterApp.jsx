@@ -22,6 +22,7 @@ export const CounterApp = ({value}) => {
     <>
         <h1>CounterApppppp</h1>
         <h2>El valor es {valor}</h2> 
+        <h2>El valor es {valor}</h2> 
         {/* <div className="clasee">{valor}</div> */}
         <button onClick={cambiarValor}>boton para cambiar a 8</button>
         <button onClick={restar}>Restar 2</button>
